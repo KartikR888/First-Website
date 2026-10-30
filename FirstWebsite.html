@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to My First Website - Kartik R</title>
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --primary: #0f4dd4;
+      --primary-hover: #1d4ed8;
+      --accent: #51bff2;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0 1rem 3rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 2.25rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
+      
+    }
+
+    header h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      }
+
+    .tech-stack {
+      display: inline-flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tag {
+      background: #aac9f3;
+      color: #01070f;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .tag:hover {
+      background: #8dffad;
+      color: #000;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .interactive-section {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 1.9rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 1.5rem 0;
+    }
+
+    button {
+      background-color: lightblue;
+      color: #eee3e3;
+      border: 1px solid #000;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    button:hover {
+      background-color: #8dffad;
+        transform: translateY(-2px);
+        padding: 0.75rem 1.5rem;
+    }
+
+    .links-section {
+      display: flex;
+      justify-content: center;
+      gap: 1.9rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .links-section a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .info {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .links-section a:hover {
+      border-color: var(--primary);
+      padding-bottom: 2px;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* 3x2 Grid for Landscape Photos */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 1.25rem;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      background-color: #000;
+      aspect-ratio: 16 / 10;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .video-section {
+      background: var(--card-bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe,
+    .video-wrapper video {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .name:hover {
+        color: var(--primary-hover);
+        transition: color 0.3s ease;
+        padding-bottom: 2px;
+        animation: glitch 1s infinite;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My First Website</h1>
+    <h2 class="name">Hi, I'm KARTIK R</h2>
+    <p class="info">I'm a passionate web developer creating beautiful and functional websites.</p>
+
+    <div class="tech-stack">
+      <span class="tag"><a href="https://github.com/KartikR888" target="_blank">GitHub</a></span>
+      <span class="tag"><a href="https://www.linkedin.com/in/kartik-r-699823423" target="_blank">LinkedIn</a></span>
+      <span class="tag"><a href="https://me.developers.google.com/u/110840290286038201242" target="_blank">Google Developer</a></span>
+    </div>
+  </header>
+
+  <div class="container">
+
+      <div class="links-section">
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Know more about HTML</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">Know more about CSS</a>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">Know more about JavaScript</a>
+      </div>
+    </section>
+
+    <!-- 3x2 Landscapes Grid -->
+    <section>
+      <h3 class="section-title">Scenic Landscapes</h3>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1018/800/500" alt="Mountain misty valley"> 
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1015/800/500" alt="River canyon view">
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1016/800/500" alt="Rugged mountain cliff">
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1029/800/500" alt="Vibrant green pasture with hills">
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1036/800/500" alt="Mountain snow peak">
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1043/800/500" alt="Coastal cliffs and ocean">
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Showcase -->
+    <section class="video-section">
+      <h3 class="section-title">Featured Video</h3>
+      <div class="video-wrapper">
+        <video controls>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
